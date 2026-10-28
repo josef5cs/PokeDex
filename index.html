@@ -4,12 +4,90 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PokeDex 2026</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="styles/index.css">
     </head>
     <body>
-        <header>P o k e D é x   2026</header>
-    
+        <nav id="sidebar">
+            <div id="sidebar_content">
+                <div id="user">
+                    <img src="assets/Ash.jpg" id="user_avatar" alt="Avatar">
 
+                    <p id="user_infos">
+                        <span class="item-description">
+                            Ash Ketchum
+                        </span>
+                        <span class="item-description">
+                            Treinador da cidade de Pallet
+                        </span>
+                    </p>
+                </div>
+
+                <ul id="side_items">
+                    <li class="side-item active">
+                        <a href="#">
+                            <i class="fa-solid fa-dragon"></i>    
+                            <span class="item-description">
+                                Nome
+                            </span>                    
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-list-ol"></i>    
+                            <span class="item-description">
+                                Número
+                            </span>                    
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-leaf"></i>    
+                            <span class="item-description">
+                                Tipo
+                            </span>                    
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-up-down"></i>    
+                            <span class="item-description">
+                                Altura
+                            </span>                    
+                        </a>
+                    </li>
+
+                    <li class="side-item">
+                        <a href="#">
+                            <i class="fa-solid fa-scale-balanced"></i>    
+                            <span class="item-description">
+                                Peso
+                            </span>                    
+                        </a>
+                    </li>
+                </ul>
+
+                <button id="open_btn">
+                    <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>                
+                </button>
+            </div>   
+
+            <div id="logout">
+                <button id="logout_btn">
+                    <i class="fa-solid fa-rotate-left"></i>  
+                    <span class="item-description">
+                        Limpar 
+                    </span>                
+                </button>
+            </div>
+        </nav>
+
+        <main>
+            PokeDéx   2026
+        </main>
         <script src="scripts/index.js"></script>
     </body>
 </html>
