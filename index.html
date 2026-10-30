@@ -14,61 +14,37 @@
                     <img src="assets/Ash.jpg" id="user_avatar" alt="Avatar">
 
                     <p id="user_infos">
-                        <span class="item-description">
+                        <span class="item-description1">
                             Ash Ketchum
                         </span>
-                        <span class="item-description">
+                        <span class="item-description1">
                             Treinador da cidade de Pallet
                         </span>
                     </p>
                 </div>
 
                 <ul id="side_items">
-                    <li class="side-item active">
+                    <li class="side-item">
                         <a href="#">
                             <i class="fa-solid fa-dragon"></i>    
                             <span class="item-description">
                                 Nome
-                            </span>                    
+                            </span>  
+                            <input type="text" id="inputName">                                            
                         </a>
-                    </li>
+                        <button onclick="nome()" id="pesquisarName">Pesquisar</button>                         
+                    </li>          
 
                     <li class="side-item">
                         <a href="#">
                             <i class="fa-solid fa-list-ol"></i>    
                             <span class="item-description">
                                 Número
-                            </span>                    
+                            </span> 
+                            <input type="number" id="inputNumero">                   
                         </a>
+                        <button id="pesquisarNumero">Pesquisar</button>
                     </li>
-
-                    <li class="side-item">
-                        <a href="#">
-                            <i class="fa-solid fa-leaf"></i>    
-                            <span class="item-description">
-                                Tipo
-                            </span>                    
-                        </a>
-                    </li>
-
-                    <li class="side-item">
-                        <a href="#">
-                            <i class="fa-solid fa-up-down"></i>    
-                            <span class="item-description">
-                                Altura
-                            </span>                    
-                        </a>
-                    </li>
-
-                    <li class="side-item">
-                        <a href="#">
-                            <i class="fa-solid fa-scale-balanced"></i>    
-                            <span class="item-description">
-                                Peso
-                            </span>                    
-                        </a>
-                    </li>
-                </ul>
 
                 <button id="open_btn">
                     <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>                
@@ -76,7 +52,7 @@
             </div>   
 
             <div id="logout">
-                <button id="logout_btn">
+                <button onclick="limpar()" id="logout_btn">
                     <i class="fa-solid fa-rotate-left"></i>  
                     <span class="item-description">
                         Limpar 
@@ -85,9 +61,17 @@
             </div>
         </nav>
 
-        <main>
-            PokeDéx   2026
-        </main>
+        <div id="caixaAlta">
+            <main>
+                PokeDéx   2026
+            </main>
+            <div id="pokedex">
+                <img id="fotoPokeDex" src="assets/Pokedex2.jpg" alt="PokeDex">
+                <img id="pokedexImagem"></img>
+            </div>
+            
+        </div>
+        
         <script src="scripts/index.js"></script>
     </body>
 </html>

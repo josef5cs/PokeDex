@@ -9,7 +9,9 @@
 
 body{
     display: flex;
-    background-image: linear-gradient(to right, red, rgb(121, 0, 0), rgb(0, 0, 0));
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-image: radial-gradient(rgb(255, 253, 253), rgb(254, 50, 51), rgb(0, 0, 0)); 
     min-height: 100vh;
 }
 
@@ -26,6 +28,46 @@ main{
     margin: auto auto;
     text-align: center;
     width: 30%;
+    position: relative;
+    border:1px solid rgba(0, 0, 0, 0);
+}
+
+#pokedex{
+    width: 30%;
+    border-radius: 20px;
+    height: 90dvh;
+    position: relative;
+}
+
+#pokedexImagem{
+    width: 82%;
+    height: 53%;
+    top: 95px;
+    left:37px;
+    z-index: 1;
+    position: absolute;
+}
+
+#fotoPokeDex{
+    width: 100%;
+    border-radius: 20px;
+    height: 90dvh;
+    position: absolute;
+    z-index: 0;
+}
+
+
+#caixaAlta{
+    width: 99.9%;
+    height: 100dvh;
+    z-index: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: nowrap;
+    border:1px solid rgb(253, 250, 250);
 }
 
 #user_avatar{
@@ -42,6 +84,10 @@ main{
     background-image: linear-gradient(180deg, red, rgb(121, 0, 0), rgb(0, 0, 0));
     height: 100dvh;
     border-radius: 0px 18px 18px 0px;
+    position: relative;
+    transition: all .5s;
+    min-width: 82px;
+    z-index:1;
 }
 
 #sidebar_content{
@@ -80,29 +126,29 @@ main{
 
 .side-item{
     border-radius: 8px;
+    gap: 10px;
     padding: 14px;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    /* border:1px solid rgb(255, 255, 255); */
+    flex-direction: row;
 }
 
-.side-item.active{
-    background-color: rgb(255, 0, 0);
-}
-
-.side-item:hover:not(.active){
+.side-item:hover:not(.active), 
+#logout_btn:hover{
     background-color: rgb(255, 0, 0);
 }
 
 .side-item a{
     text-decoration: none;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 14px;
+    justify-content: center;
     color: rgb(209, 209, 209);
+    /* border:1px solid black; */
+    flex-wrap: nowrap;
 
-}
-
-.side-item.active a{
-    background-color: rgb(179, 0, 0);
 }
 
 .side-item a i{
@@ -111,4 +157,180 @@ main{
     justify-content: center;
     width: 20px;
     height: 20px; 
+}
+
+#logout{
+    border-top: 1px solid white;
+    padding: 12px;    
+}
+
+#logout_btn{
+    border:none;
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+}
+
+#open_btn{
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open_btn_icon{
+    transition: transform 1s ease;
+}
+
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+}
+
+.item-description{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+.item-description1{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+
+#sidebar.open-sidebar{
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description{
+    width: 50px;
+    height: auto;
+}
+#sidebar.open-sidebar .item-description1{
+    width: 170px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side-item a{
+    justify-content: flex-start;
+    gap: 14px; 
+}
+
+#sidebar.open-sidebar #inputName{
+    width: 200px;
+    display:flex;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    transition: width .6s;
+    height: 20px;
+    border-radius: 2px;
+    border: none;
+    text-align: center;
+}
+#sidebar.open-sidebar #inputNumero{
+    width: 200px;
+    display:flex;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    transition: width .6s;
+    height: 20px;
+    border-radius: 2px;
+    border: none;
+    text-align: center;
+}
+#sidebar.open-sidebar #pesquisarName{
+    width: 70px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 12px;
+    transition: width .6s;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+#sidebar.open-sidebar #pesquisarNumero{
+    width: 70px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 12px;
+    transition: width .6s;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+#inputName{
+    width: 0px;
+    display: none;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    transition: width .5s;
+    height: 0px;
+}
+#inputNumero{
+    width: 0px;
+    display: none;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    transition: width .5s;
+    height: 0px;
+}
+#pesquisarName{
+    width: 0px;
+    display: none;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    transition: width .5s;
+    height: 0px;
+}
+#pesquisarNumero{
+    width: 0px;
+    display: none;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    transition: width .5s;
+    height: 0px;
+}
+
+.item-description{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
 }
