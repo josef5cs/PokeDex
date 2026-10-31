@@ -222,23 +222,21 @@ body{
 }
 .item-description{
     width: 20%;
+    display: block;
+    overflow:hidden;
     white-space: nowrap;
-    text-overflow: ellipse;
+    text-overflow:ellipsis;
     font-size: 14px;
     height: 100%;
     /* border:1px solid yellow */
 }
 #inputName{
     width: 60%;
-    white-space: nowrap;
-    text-overflow: ellipse;
     font-size: 14px;
     height: 20px;
 }
 #inputNumero{
     width: 60%;
-    white-space: nowrap;
-    text-overflow: ellipse;
     font-size: 14px;
     height: 20px;
 }
@@ -248,7 +246,7 @@ body{
     display: block;
     overflow:hidden;
     white-space: nowrap;
-    text-overflow: ellipse;
+    text-overflow:ellipsis;
     font-size: 14px;
     height:50%;    
 }
@@ -258,7 +256,7 @@ body{
     display: block;
     overflow:hidden;
     white-space: nowrap;
-    text-overflow: ellipse;
+    text-overflow: ellipsis;
     font-size: 14px;
     height:50%;
 }
@@ -324,7 +322,7 @@ body{
     width: 90%;
     height: 50%;
     white-space: nowrap;
-    text-overflow: ellipse;
+    text-overflow: ellipsis;
     font-size: 14px;
     /* border:1px solid yellow;  */
     align-items: center;
