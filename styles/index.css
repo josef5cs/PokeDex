@@ -9,28 +9,90 @@
 
 body{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-image: radial-gradient(rgb(255, 253, 253), rgb(254, 50, 51), rgb(0, 0, 0)); 
     min-height: 100dvh;
 }
 
-main{
-    font-family: "Honk", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-    "MORF" 15,
-    "SHLN" 50;
-    font-size: 45px;
-    color: rgb(255, 115, 0);
-    margin: auto auto;
-    text-align: center;
-    width: 30%;
-    position: relative;
-    border:1px solid rgba(0, 0, 0, 0);
+/* -------------------------------------------------------------------------------------- */
+#sidebar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(180deg, red, rgb(121, 0, 0), rgb(0, 0, 0));
     height: 10dvh;
+    border-radius: 0px 0px 18px 18px;
+    /* border: 1px solid rgb(0, 255, 0); */
+}
+#sidebar_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    /* border:5px solid rgb(255, 0, 234); */
+    width: 80%;
+    height: 100%;
+}
+#user{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; 
+    text-overflow:ellipsis;
+    /* border:1px solid rgb(248, 248, 248); */
+    width: 30%;
+    height: 100%;
+}
+@media(max-width: 500px){
+    #user{
+        display: none;
+    }
 }
 
+#user_avatar{
+    width: 20%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+#user_infos{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid rgb(248, 7, 216); */
+    width: 80%;
+    height: 100%;
+}
+
+
+#user_infos span:last-child{
+    color: rgb(209, 209, 209);
+    font-size: 13px;
+    width: 65%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    overflow:hidden;
+    /* border: 1px solid blue; */
+    
+}
+#user_infos span:first-child{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    width: 35%;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    font-size: 14px;
+    /* border: 1px solid rgb(217, 255, 0); */
+    display: block;
+    overflow:hidden;
+}
+/* ------------------------------------------------------------------------------------------ */
 #pokedex{
     width: 30%;
     min-width:300px;
@@ -74,169 +136,142 @@ main{
 
 #caixaAlta{
     width: 100%;
-    height: 100dvh;
-    z-index: -1;
+    height: 90dvh;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
     flex-wrap: nowrap;
-    border:1px solid rgb(253, 250, 250);
-    position: absolute;
+    /* border:1px solid rgb(253, 250, 250); */
 }
 
-#user_avatar{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 40px;
-}
 
-#sidebar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-image: linear-gradient(180deg, red, rgb(121, 0, 0), rgb(0, 0, 0));
-    height: 100dvh;
-    border-radius: 0px 18px 18px 0px;
-    position: relative;
-    min-width: 82px;
-    z-index:1;
-    transition: all 1s;
-    /* border: 1px solid rgb(0, 255, 0); */
-}
-
-#sidebar_content{
-    padding: 12px;
-    transition: width 1s;
-    /* border:1px solid blue; */
-    width: 100%;
-    height: 70%;
-}
-
-#user{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 24px; 
-    text-overflow:ellipsis;
-    /* border:1px solid rgb(255, 252, 252);  */
-    width: 100%;
-}
-
-#user_infos{
-    display: flex;
-    flex-direction: column;
-    /* border:1px solid rgb(0, 0, 0); */
-    width: 0%;
-    display: none;
-    transition: width 1s;
-}
-
-#sidebar.open-sidebar #user_infos{
-    display: flex;
-    flex-direction: column;
-    /* border:1px solid rgb(0, 0, 0); */
-    width: 70%;
-    overflow: hidden;
-    padding-left: 1%;
-    transition: width 1s;
-
-}
-
-.item-description1{
-    width: 0px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow:ellipsis;
-    font-size: 14px;
-    height: 0px;
-    /* border: 1px solid rgb(253, 253, 0);  */
-}
-
-#user_infos span:last-child{
-    color: rgb(209, 209, 209);
-    font-size: 13px;
-}
-#user_infos span:first-child{
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-}
-
+/* ------------------------------------------------------------------------------- */
 #side_items{
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
     list-style: none;
+    width: 100%;
+    /* border:5px solid rgb(58, 247, 0); */
+    height: 100%;
 }
-
+@media(max-width: 500px){
+    .side_items{
+        width: 100%;
+    }
+}
 .side-item{
+    width: 50%;
     border-radius: 8px;
-    gap: 10px;
-    padding: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border:1px solid rgb(255, 255, 255); */
+    /* border:1px solid rgb(0, 0, 0); */
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
-
-.side-item:hover:not(.active), 
-#logout_btn:hover{
-    background-color: rgb(255, 0, 0);
+@media(max-width: 500px){
+    .side-item{
+        width: 100%;
+    }
 }
-
+.side-item1{
+    width: 50%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid rgb(0, 0, 0); */
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+@media(max-width: 500px){
+    .side-item1{
+        display: none;
+    }
+}
 .side-item a{
     text-decoration: none;
-    display: flex;
+    display:flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
     color: rgb(209, 209, 209);
-    /* border:1px solid black; */
+    /* border:1px solid rgb(60, 255, 0); */
     flex-wrap: nowrap;
-    transition: width 1s;
-
+    width: 70%;
 }
-
+.side-item1 a{
+    text-decoration: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(209, 209, 209);
+    /* border:1px solid rgb(60, 255, 0); */
+    flex-wrap: nowrap;
+    width: 70%;
+}
 .side-item a i{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
+    width: 10%;
     height: 20px; 
+    /* border:1px solid black; */
 }
-
-#logout{
-    border-top: 1px solid white;
-    padding: 12px;   
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    width: 100%;
-}
-
-#logout_btn{
-    width: 100%;
-    border:none;
-    padding: 12px;
+.item-description{
+    width: 20%;
+    white-space: nowrap;
+    text-overflow: ellipse;
     font-size: 14px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    border-radius: 8px;
-    text-align: start;
-    cursor: pointer;
-    background-color: transparent;
-    color: white;
-    /* border: 1px solid green; */
-    
+    height: 100%;
+    /* border:1px solid yellow */
+}
+#inputName{
+    width: 60%;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    height: 20px;
+}
+#inputNumero{
+    width: 60%;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    height: 20px;
+}
+#pesquisarName{
+    width: 20%;
+    border-radius: 30px;
+    display: block;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    height:50%;    
+}
+#pesquisarNumero{
+    width: 20%;
+    border-radius: 30px;
+    display: block;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    height:50%;
 }
 
-#logout_btn span{
-    text-overflow:ellipsis;    
+
+
+
+
+
+
+.side-item:hover:not(.active), 
+#logout_btn:hover{
+    background-color: rgb(255, 0, 0);
 }
 
 #open_btn{
@@ -252,136 +287,49 @@ main{
     cursor: pointer;
 }
 
-#open_btn_icon{
-    transition: transform 1s ease;
-}
-
-.open-sidebar #open_btn_icon {
-    transform: rotate(180deg);
-}
 
 
-#sidebar.open-sidebar{
-    max-width:20%;
-    transition: all 1s;
-}
 
-#sidebar.open-sidebar .item-description{
-    width: 50px;
-    height: auto;
-    transition: width 1s;
+
+/* ----------------------------------------------------------------------------------- */
+#logout{
+    border-left: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 20%;
+    height: 100%;
+
 }
-#sidebar.open-sidebar .item-description1{
+#logout_btn{
     width: 100%;
     height: 100%;
-    white-space: nowrap;
-    text-overflow:ellipsis;
-    /* border:1px solid black; */
-    transition: width 1s;
-}
-
-#sidebar.open-sidebar .side-item a{
-    width: 100%;
+    padding: 12px;
+    font-size: 14px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 20px;
     align-items: center;
-    gap: 14px; 
-    /* border:1px solid black; */  
-    transition: width 1s;  
-}
-
-
-#sidebar.open-sidebar #inputName{
-    width: 54%;
-    min-width: 100px;
-    display:flex;
-    white-space: nowrap;
-    text-overflow: ellipse;
-    font-size: 14px;
-    height: 20px;
-    border-radius: 2px;
-    border: none;
-    text-align: center;
-    transition: width 1s;
-}
-#sidebar.open-sidebar #inputNumero{
-    width: 54%;
-    min-width: 100px;
-    display:flex;
-    white-space: nowrap;
-    text-overflow: ellipse;
-    font-size: 14px;
-    height: 20px;
-    border-radius: 2px;
-    border: none;
-    text-align: center;
-    transition: width 1s;
-}
-#sidebar.open-sidebar #pesquisarName{
-    width: 70px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    text-overflow: ellipse;
-    font-size: 12px;
-    height: 20px;
-    border-radius: 10px;
-    text-align: center;
+    border-radius: 0px 0px 8px 0px;
+    text-align: start;
     cursor: pointer;
+    background-color: transparent;
+    color: white;
+    /* border: 1px solid green; */
+    
 }
-#sidebar.open-sidebar #pesquisarNumero{
-    width: 70px;
-    display:flex;
+#logout_btn i{
+    width: 10%;
+}
+.item-descriptionLogout{
+    width: 90%;
+    height: 50%;
+    white-space: nowrap;
+    text-overflow: ellipse;
+    font-size: 14px;
+    /* border:1px solid yellow;  */
     align-items: center;
-    justify-content: center;
+    display: block;
+    overflow:hidden;
     white-space: nowrap;
     text-overflow: ellipse;
-    font-size: 12px;
-    height: 20px;
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
-}
-#inputName{
-    width: 0px;
-    display: none;
-    white-space: nowrap;
-    text-overflow: ellipse;
-    font-size: 14px;
-    height: 0px;
-}
-#inputNumero{
-    width: 0px;
-    display: none;
-    white-space: nowrap;
-    text-overflow: ellipse;
-    font-size: 14px;
-    height: 0px;
-}
-#pesquisarName{
-    width: 0px;
-    display: none;
-    white-space: nowrap;
-    text-overflow: ellipse;
-    font-size: 14px;
-    height: 0px;
-}
-#pesquisarNumero{
-    width: 0px;
-    display: none;
-    white-space: nowrap;
-    text-overflow: ellipse;
-    font-size: 14px;
-    height: 0px;
-}
-
-.item-description{
-    width: 0px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipse;
-    font-size: 14px;
-    height: 0px;
 }

@@ -1,7 +1,3 @@
-document.getElementById("open_btn").addEventListener("click", function(){
-    document.getElementById("sidebar").classList.toggle("open-sidebar"); 
-});
-
 const nome = () => {
     const digitado = document.getElementById("inputName").value;
 
