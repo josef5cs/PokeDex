@@ -25,5 +25,5 @@ const nome = () => {
 const limpar = () => {
     document.getElementById("inputName").value="";
     document.getElementById("inputNumero").value="";
-
+    document.getElementById("pokedexImagem").src="assets/descanso.gif";
 }

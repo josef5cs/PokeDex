@@ -9,10 +9,8 @@
 
 body{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     background-image: radial-gradient(rgb(255, 253, 253), rgb(254, 50, 51), rgb(0, 0, 0)); 
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 main{
@@ -30,44 +28,61 @@ main{
     width: 30%;
     position: relative;
     border:1px solid rgba(0, 0, 0, 0);
+    height: 10dvh;
 }
 
 #pokedex{
     width: 30%;
+    min-width:300px;
     border-radius: 20px;
     height: 90dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    border: 1px solid rgb(0, 255, 0);
     position: relative;
+    z-index: 2;
 }
 
 #pokedexImagem{
-    width: 82%;
-    height: 53%;
-    top: 95px;
-    left:37px;
     z-index: 1;
     position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#divDaImagem{
+    border:1px solid rgb(4, 253, 4);
+    position: absolute;
+    z-index: 1;
+    width: 82%;
+    height: 52.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 18%;
 }
 
 #fotoPokeDex{
     width: 100%;
     border-radius: 20px;
-    height: 90dvh;
-    position: absolute;
-    z-index: 0;
+    height: 89dvh;
+    z-index: 0;   
 }
 
 
 #caixaAlta{
-    width: 99.9%;
+    width: 100%;
     height: 100dvh;
-    z-index: 0;
-    position: fixed;
+    z-index: -1;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
     flex-wrap: nowrap;
     border:1px solid rgb(253, 250, 250);
+    position: absolute;
 }
 
 #user_avatar{
@@ -85,14 +100,14 @@ main{
     height: 100dvh;
     border-radius: 0px 18px 18px 0px;
     position: relative;
-    transition: all .5s;
     min-width: 82px;
     z-index:1;
+    transition: all 1s;
 }
 
 #sidebar_content{
-    padding: 12px
-
+    padding: 12px;
+    transition: width 1s;
 }
 
 #user{
@@ -100,12 +115,17 @@ main{
     align-items: center;
     gap: 8px;
     margin-bottom: 24px; 
+    text-overflow:ellipsis;
+    /* border:1px solid rgb(255, 252, 252); */
+    width: 100%;
 }
 
 #user_infos{
     display: flex;
     flex-direction: column;
-
+    text-overflow:ellipsis;
+    /* border:1px solid rgb(123, 255, 0); */
+    width: 60%;
 }
 
 #user_infos span:last-child{
@@ -129,9 +149,11 @@ main{
     gap: 10px;
     padding: 14px;
     display: flex;
+    justify-content: center;
     align-items: center;
     /* border:1px solid rgb(255, 255, 255); */
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .side-item:hover:not(.active), 
@@ -148,6 +170,7 @@ main{
     color: rgb(209, 209, 209);
     /* border:1px solid black; */
     flex-wrap: nowrap;
+    transition: width 1s;
 
 }
 
@@ -205,60 +228,73 @@ main{
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 14px;
-    transition: width .6s;
     height: 0px;
 }
 .item-description1{
     width: 0px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipse;
+    text-overflow:ellipsis;
     font-size: 14px;
-    transition: width .6s;
     height: 0px;
 }
 
 #sidebar.open-sidebar{
-    min-width: 15%;
+    max-width:20%;
+    transition: all 1s;
 }
 
 #sidebar.open-sidebar .item-description{
     width: 50px;
     height: auto;
+    transition: width 1s;
 }
 #sidebar.open-sidebar .item-description1{
-    width: 170px;
+    width: 100%;
     height: auto;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    /* border:1px solid black; */
+    transition: width 1s;
 }
 
 #sidebar.open-sidebar .side-item a{
-    justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 14px; 
+    /* border:1px solid black; */  
+    transition: width 1s;  
 }
 
+
 #sidebar.open-sidebar #inputName{
-    width: 200px;
+    width: 54%;
+    min-width: 100px;
     display:flex;
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 14px;
-    transition: width .6s;
     height: 20px;
     border-radius: 2px;
     border: none;
     text-align: center;
+    transition: width 1s;
 }
 #sidebar.open-sidebar #inputNumero{
-    width: 200px;
+    width: 54%;
+    min-width: 100px;
     display:flex;
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 14px;
-    transition: width .6s;
     height: 20px;
     border-radius: 2px;
     border: none;
     text-align: center;
+    transition: width 1s;
 }
 #sidebar.open-sidebar #pesquisarName{
     width: 70px;
@@ -268,7 +304,6 @@ main{
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 12px;
-    transition: width .6s;
     height: 20px;
     border-radius: 10px;
     text-align: center;
@@ -282,7 +317,6 @@ main{
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 12px;
-    transition: width .6s;
     height: 20px;
     border-radius: 10px;
     text-align: center;
@@ -294,7 +328,6 @@ main{
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 14px;
-    transition: width .5s;
     height: 0px;
 }
 #inputNumero{
@@ -303,7 +336,6 @@ main{
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 14px;
-    transition: width .5s;
     height: 0px;
 }
 #pesquisarName{
@@ -312,7 +344,6 @@ main{
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 14px;
-    transition: width .5s;
     height: 0px;
 }
 #pesquisarNumero{
@@ -321,7 +352,6 @@ main{
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 14px;
-    transition: width .5s;
     height: 0px;
 }
 
@@ -331,6 +361,5 @@ main{
     white-space: nowrap;
     text-overflow: ellipse;
     font-size: 14px;
-    transition: width .6s;
     height: 0px;
 }
