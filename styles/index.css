@@ -131,21 +131,34 @@ body{
 #nomeNumero{
     position: absolute;
     color: white;
-    /* border:1px solid rgb(245, 245, 247); */
+    border:1px solid rgb(245, 245, 247);
     z-index: 1;
-    top: 75.9%;
-    width: 85%;
+    top: 75%;
+    width: 87%;
+    height: 4%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     font-family: "Silkscreen", sans-serif;
     font-weight: 500;
     font-style: normal;
     color: rgb(4, 0, 255);
     font-size: 12px;
+    border-radius: 30px;
 }
+#nomeNumero span{
+    /* border:1px solid yellow; */
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 3%;
+}
+
 #nomePokemon{
     /* border:1px solid black; */
-    width: 40%;
+    width: 50%;    
 }
 #numeroPokemon{
     /* border:1px solid black; */
@@ -178,7 +191,7 @@ body{
     display: flex;
     flex-direction: row;
     list-style: none;
-    width: 80%;
+    width: 100%;
     /* border:5px solid rgb(58, 247, 0); */
     height: 100%;
 }
@@ -289,6 +302,10 @@ body{
 }
 
 .side-item:hover:not(.active), 
+#logout_btn:hover{
+    background-color: rgb(255, 0, 0);
+}
+.side-item1:hover:not(.active), 
 #logout_btn:hover{
     background-color: rgb(255, 0, 0);
 }

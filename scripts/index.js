@@ -19,6 +19,27 @@ const nome = () => {
     }
     
 }
+const numero = () => {
+    const digitadoNumero = document.getElementById("inputNumero").value;
+
+    pesquisar2()
+    async function pesquisar2(){
+        const url = `https://pokeapi.co/api/v2/pokemon/${digitadoNumero}`
+        console.log(url)
+
+        const pegar = await fetch(url);
+
+        const data = await pegar.json();
+
+        console.log(data)
+
+        document.getElementById("pokedexImagem").src=data.sprites.other.home.front_default;
+        document.getElementById("nomePokemon").innerText=data.name;
+        document.getElementById("numeroPokemon").innerText=data.id;
+        
+    }
+    
+}
 
 const limpar = () => {
     document.getElementById("inputName").value="";
