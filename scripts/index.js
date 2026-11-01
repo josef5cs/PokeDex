@@ -13,6 +13,8 @@ const nome = () => {
         console.log(data)
 
         document.getElementById("pokedexImagem").src=data.sprites.other.home.front_default;
+        document.getElementById("nomePokemon").innerText=data.name;
+        document.getElementById("numeroPokemon").innerText=data.id;
         
     }
     
@@ -22,4 +24,6 @@ const limpar = () => {
     document.getElementById("inputName").value="";
     document.getElementById("inputNumero").value="";
     document.getElementById("pokedexImagem").src="assets/descanso.gif";
+    document.getElementById("nomePokemon").innerText="";
+    document.getElementById("numeroPokemon").innerText="";
 }
