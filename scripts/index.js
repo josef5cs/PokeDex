@@ -110,4 +110,18 @@ const limpar = () => {
     document.getElementById("alturaPokemon").innerText="";
     document.getElementById("pesoPokemon").innerText=""; 
 }
+const limpar2 = () => {
+    document.getElementById("nomeNumero").style.display="none"
+    document.getElementById("divInformacoes").style.display="none"
+    document.getElementById("inputName").value="";
+    document.getElementById("inputNumero").value="";
+    document.getElementById("inputNumero2").value="";
+    document.getElementById("pokedexImagem").src="assets/descanso.gif";
+    document.getElementById("nomePokemon").innerText="";
+    document.getElementById("numeroPokemon").innerText="";
+    document.getElementById("tipoPokemon1").innerText="";        
+    document.getElementById("tipoPokemon2").innerText="";        
+    document.getElementById("alturaPokemon").innerText="";
+    document.getElementById("pesoPokemon").innerText=""; 
+}
 
