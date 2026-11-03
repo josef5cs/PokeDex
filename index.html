@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,  interactive-widget=resizes-content">
         <title>PokeDex 2026</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="styles/index.css">
@@ -44,6 +44,7 @@
                         </a>
                         <button onclick="numero()" id="pesquisarNumero">Pesquisar</button>
                     </li>
+                </ul>    
             </div>   
 
             <div id="logout">
@@ -85,6 +86,32 @@
                 </div>
             </div>           
         </div>
+
+        <nav id="sidebar2">
+            <div id="sidebar_content2">
+                <ul id="side_items2">
+                    <li class="side-item2">
+                        <a href="#">
+                            <i class="fa-solid fa-list-ol"></i>    
+                            <span class="item-description2">
+                                Número
+                            </span> 
+                            <input onchange="numero2()" type="number" id="inputNumero2">                   
+                        </a>
+                        <button onclick="numero2()" id="pesquisarNumero">Pesquisar</button>
+                    </li>
+                </ul>    
+            </div>   
+
+            <div id="logout">
+                <button onclick="limpar()" id="logout_btn">
+                    <i class="fa-solid fa-rotate-left"></i>  
+                    <span class="item-descriptionLogout">
+                        Limpar 
+                    </span>                
+                </button>
+            </div>
+        </nav>
         
         <script src="scripts/index.js"></script>
     </body>
