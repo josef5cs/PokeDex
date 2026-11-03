@@ -131,7 +131,7 @@ body{
 #nomeNumero{
     position: absolute;
     color: white;
-    border:1px solid rgb(245, 245, 247);
+    /* border:1px solid rgb(245, 245, 247); */
     z-index: 1;
     top: 75%;
     width: 87%;
@@ -145,6 +145,7 @@ body{
     color: rgb(4, 0, 255);
     font-size: 12px;
     border-radius: 30px;
+    display:none;
 }
 #nomeNumero span{
     /* border:1px solid yellow; */
@@ -165,6 +166,93 @@ body{
     width: 20%;
 }
 
+#divInformacoes{
+    position: absolute;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(4, 0, 255);
+    font-size: 12px;  
+    bottom: 10%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border:1px solid rgb(6, 253, 6); */
+    right: 25.4%;
+    width: 44%;
+    height: 13.3%;
+    bottom:5%;
+    display: none;
+}
+
+
+#espacoTipo{
+    display: flex;
+    flex-direction: row;
+    /* border:1px solid black; */
+    height: 33%;
+    width: 100%;
+}
+#espacoAltura{
+    display: flex;
+    flex-direction: row;
+    /* border:1px solid black; */
+    height: 33%;
+    width: 100%;
+}
+#espacoPeso{
+    display: flex;
+    flex-direction: row;
+    /* border:1px solid black; */
+    height: 33%;
+    width: 100%;
+}
+
+#espacoTipo span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#espacoAltura span{
+    display: flex;
+    align-items: center;
+}
+#espacoPeso span{
+    display: flex;
+    align-items: center;
+}
+
+
+
+#tipoPokemon1{
+    width: 39%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+#tipoPokemon2{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#alturaPokemon{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* border:1px solid red; */
+}
+#pesoPokemon{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 #fotoPokeDex{
     width: 100%;
@@ -172,7 +260,6 @@ body{
     height: 89dvh;
     z-index: 0;  
 }
-
 
 #caixaAlta{
     width: 100%;
@@ -184,6 +271,8 @@ body{
     flex-wrap: nowrap;
     /* border:3px solid rgb(72, 253, 0); */
 }
+
+
 
 
 /* ------------------------------------------------------------------------------- */

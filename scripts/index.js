@@ -12,10 +12,22 @@ const nome = () => {
 
         console.log(data)
 
+        document.getElementById("nomeNumero").style.display="flex"
+        document.getElementById("divInformacoes").style.display="flex"
         document.getElementById("pokedexImagem").src=data.sprites.other.home.front_default;
         document.getElementById("nomePokemon").innerText=data.name;
-        document.getElementById("numeroPokemon").innerText=data.id;
+        document.getElementById("numeroPokemon").innerText=data.id; 
+        document.getElementById("alturaPokemon").innerText=(data.height)/10 + " metros";  
+        document.getElementById("pesoPokemon").innerText=(data.weight)/10 + " quilos"; 
+        if(data.types[1]){
+            document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;
+            return document.getElementById("tipoPokemon2").innerText=data.types[1].type.name;
+        } else{
+            document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;
+            return document.getElementById("tipoPokemon2").innerText="";            
+        }
         
+                                                        
     }
     
 }
@@ -33,18 +45,34 @@ const numero = () => {
 
         console.log(data)
 
+        document.getElementById("nomeNumero").style.display="flex"
+        document.getElementById("divInformacoes").style.display="flex"
         document.getElementById("pokedexImagem").src=data.sprites.other.home.front_default;
         document.getElementById("nomePokemon").innerText=data.name;
-        document.getElementById("numeroPokemon").innerText=data.id;
-        
-    }
-    
+        document.getElementById("numeroPokemon").innerText=data.id; 
+        document.getElementById("alturaPokemon").innerText=(data.height)/10 + " metros";  
+        document.getElementById("pesoPokemon").innerText=(data.weight)/10 + " quilos"; 
+        if(data.types[1]){
+            document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;
+            return document.getElementById("tipoPokemon2").innerText=data.types[1].type.name;
+        } else{
+            document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;
+            return document.getElementById("tipoPokemon2").innerText="";            
+        }       
+    }   
 }
 
 const limpar = () => {
+    document.getElementById("nomeNumero").style.display="none"
+    document.getElementById("divInformacoes").style.display="none"
     document.getElementById("inputName").value="";
     document.getElementById("inputNumero").value="";
     document.getElementById("pokedexImagem").src="assets/descanso.gif";
     document.getElementById("nomePokemon").innerText="";
     document.getElementById("numeroPokemon").innerText="";
+    document.getElementById("tipoPokemon1").innerText="";        
+    document.getElementById("tipoPokemon2").innerText="";        
+    document.getElementById("alturaPokemon").innerText="";
+    document.getElementById("pesoPokemon").innerText=""; 
+    
 }
