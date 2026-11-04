@@ -58,10 +58,14 @@ const numero = () => {
         document.getElementById("pesoPokemon").innerText=(data.weight)/10 + " quilos"; 
         if(data.types[1]){
             document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;
+            document.getElementById("tipoPokemon2").style.display="flex";
+            document.getElementById("tipoPokemon1").style.width="40%"
             return document.getElementById("tipoPokemon2").innerText=data.types[1].type.name;
-        } else{
+        } else if(!data.types[1]){
             document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;
-            return document.getElementById("tipoPokemon2").innerText="";            
+            document.getElementById("tipoPokemon2").style.display="none";
+            return document.getElementById("tipoPokemon1").style.width="100%";
+                  
         }       
     }   
 }
