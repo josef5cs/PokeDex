@@ -7,14 +7,12 @@ const nome = () => {
 
     pesquisar()
     async function pesquisar(){
+    try{
         const url = `https://pokeapi.co/api/v2/pokemon/${digitado}`
-        console.log(url)
 
         const pegar = await fetch(url);
 
         const data = await pegar.json();
-
-        console.log(data)
 
         document.getElementById("nomeNumero").style.display="flex"
         document.getElementById("divInformacoes").style.display="flex"
@@ -30,6 +28,16 @@ const nome = () => {
             document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;
             return document.getElementById("tipoPokemon2").innerText="";            
         }
+    } catch(erro){
+            document.getElementById("pokedexImagem").src="assets/Interrogação.png";
+            document.getElementById("tipoPokemon1").innerText="Erro";
+            document.getElementById("nomePokemon").innerText="Erro";
+            document.getElementById("numeroPokemon").innerText="Erro"; 
+            document.getElementById("alturaPokemon").innerText="Erro";  
+            document.getElementById("pesoPokemon").innerText="Erro";
+
+        }
+
         
                                                         
     }
@@ -40,14 +48,12 @@ const numero = () => {
 
     pesquisar2()
     async function pesquisar2(){
+    try{
         const url = `https://pokeapi.co/api/v2/pokemon/${digitadoNumero}`
-        console.log(url)
 
         const pegar = await fetch(url);
 
         const data = await pegar.json();
-
-        console.log(data)
 
         document.getElementById("nomeNumero").style.display="flex"
         document.getElementById("divInformacoes").style.display="flex"
@@ -66,7 +72,18 @@ const numero = () => {
             document.getElementById("tipoPokemon2").style.display="none";
             return document.getElementById("tipoPokemon1").style.width="100%";
                   
-        }       
+        }  
+
+    } catch(erro){
+            document.getElementById("pokedexImagem").src="assets/Interrogação.png";
+            document.getElementById("tipoPokemon1").innerText="Erro";
+            document.getElementById("nomePokemon").innerText="Erro";
+            document.getElementById("numeroPokemon").innerText="Erro"; 
+            document.getElementById("alturaPokemon").innerText="Erro";  
+            document.getElementById("pesoPokemon").innerText="Erro";
+
+    }
+     
     }   
 }
 const numero2 = () => {
@@ -75,14 +92,12 @@ const numero2 = () => {
 
     pesquisar2()
     async function pesquisar2(){
+    try{
         const url = `https://pokeapi.co/api/v2/pokemon/${digitadoNumero}`
-        console.log(url)
 
         const pegar = await fetch(url);
 
         const data = await pegar.json();
-
-        console.log(data)
 
         document.getElementById("nomeNumero").style.display="flex"
         document.getElementById("divInformacoes").style.display="flex"
@@ -97,7 +112,18 @@ const numero2 = () => {
         } else{
             document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;
             return document.getElementById("tipoPokemon2").innerText="";            
-        }       
+        }     
+
+    } catch(erro){
+            document.getElementById("pokedexImagem").src="assets/Interrogação.png";
+            document.getElementById("tipoPokemon1").innerText="Erro";
+            document.getElementById("nomePokemon").innerText="Erro";
+            document.getElementById("numeroPokemon").innerText="Erro"; 
+            document.getElementById("alturaPokemon").innerText="Erro";  
+            document.getElementById("pesoPokemon").innerText="Erro";
+
+    }
+  
     }   
 }
 
