@@ -471,6 +471,11 @@ body{
     font-size: 14px;
     height: 20px;
 }
+#inputNumero2{
+    width: 60%;
+    font-size: 14px;
+    height: 20px;
+}
 #pesquisarName{
     width: 20%;
     border-radius: 30px;
@@ -482,6 +487,16 @@ body{
     height:50%;    
 }
 #pesquisarNumero{
+    width: 20%;
+    border-radius: 30px;
+    display: block;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    height:50%;
+}
+#pesquisarNumero2{
     width: 20%;
     border-radius: 30px;
     display: block;
