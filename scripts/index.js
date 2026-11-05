@@ -34,6 +34,9 @@ const nome = () => {
         }
     } catch(erro){
             document.getElementById("pokedexImagem").src="assets/Interrogação.png";
+            document.getElementById("tipoPokemon2").style.display=""
+            document.getElementById("tipoPokemon2").style.display="none";
+            document.getElementById("tipoPokemon1").style.width="100%"
             document.getElementById("tipoPokemon1").innerText="Erro";
             document.getElementById("nomePokemon").innerText="Erro";
             document.getElementById("numeroPokemon").innerText="Erro"; 
@@ -81,6 +84,9 @@ const numero = () => {
 
     } catch(erro){
             document.getElementById("pokedexImagem").src="assets/Interrogação.png";
+            document.getElementById("tipoPokemon2").style.display=""
+            document.getElementById("tipoPokemon2").style.display="none";
+            document.getElementById("tipoPokemon1").style.width="100%"
             document.getElementById("tipoPokemon1").innerText="Erro";
             document.getElementById("nomePokemon").innerText="Erro";
             document.getElementById("numeroPokemon").innerText="Erro"; 
@@ -125,6 +131,9 @@ const numero2 = () => {
 
     } catch(erro){
             document.getElementById("pokedexImagem").src="assets/Interrogação.png";
+            document.getElementById("tipoPokemon2").style.display=""
+            document.getElementById("tipoPokemon2").style.display="none";
+            document.getElementById("tipoPokemon1").style.width="100%"
             document.getElementById("tipoPokemon1").innerText="Erro";
             document.getElementById("nomePokemon").innerText="Erro";
             document.getElementById("numeroPokemon").innerText="Erro"; 
