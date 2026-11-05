@@ -24,8 +24,8 @@ const nome = () => {
         if(data.types[1]){
             document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;
             document.getElementById("tipoPokemon2").style.display="flex";
-            document.getElementById("tipoPokemon1").style.width="40%";
-            document.getElementById("tipoPokemon2").style.width="40%";      
+            document.getElementById("tipoPokemon1").style.width="50%";
+            document.getElementById("tipoPokemon2").style.width="50%";      
             return document.getElementById("tipoPokemon2").innerText=data.types[1].type.name;
         }else if(!data.types[1]){
             document.getElementById("tipoPokemon1").innerText=data.types[0].type.name;

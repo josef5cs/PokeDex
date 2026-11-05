@@ -215,10 +215,10 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* border:1px solid rgb(6, 253, 6); */
+    /* border:2px solid rgb(6, 253, 6); */
     right: 25.4%;
     width: 44%;
-    height: 13.3%;
+    height: 15.5%;
     bottom:5%;
     display: none;
 }
@@ -226,54 +226,60 @@ body{
 
 #espacoTipo{
     display: flex;
-    flex-direction: row;
-    /* border:1px solid black; */
-    height: 33%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    /* border:1px solid black;  */
+    height: 33.3%;
     width: 100%;
 }
+
 #espacoAltura{
     display: flex;
-    flex-direction: row;
-    /* border:1px solid black; */
-    height: 33%;
+    flex-direction: column;
+    /* border:1px solid black;  */
+    height: 33.3%;
     width: 100%;
 }
 #espacoPeso{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* border:1px solid black; */
-    height: 33%;
+    height: 33.3%;
     width: 100%;
 }
 
 #espacoTipo span{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 #espacoAltura span{
     display: flex;
     align-items: center;
+    height: 50%;
 }
 #espacoPeso span{
     display:flex;
     align-items: center;
 }
 
-
+#spanTipo{
+    height: 50%
+}
 
 #tipoPokemon1{
-    width: 40%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     font-size: 11px;
     color: rgb(34, 34, 34);
-    /* border:1px solid black; */
+    /* border:1px solid rgb(255, 4, 4); */
 
 }
 #tipoPokemon2{
-    width: 40%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -283,7 +289,7 @@ body{
 }
 
 #alturaPokemon{
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -293,9 +299,10 @@ body{
     /* border:1px solid red; */
 }
 #pesoPokemon{
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
+    align-items: flex-start;
     justify-content: center;
     font-size: 11px;
     color: rgb(34, 34, 34);
