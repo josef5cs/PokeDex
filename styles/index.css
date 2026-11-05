@@ -263,12 +263,13 @@ body{
 
 
 #tipoPokemon1{
-    width: 39%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: center;
     font-size: 11px;
     color: rgb(34, 34, 34);
+    /* border:1px solid black; */
 
 }
 #tipoPokemon2{
@@ -276,9 +277,9 @@ body{
     height: 100%;
     display: flex;
     justify-content: center;
-    /* border:1px solid black; */
     font-size: 11px;
     color: rgb(34, 34, 34);
+    /* border:1px solid black; */
 }
 
 #alturaPokemon{
